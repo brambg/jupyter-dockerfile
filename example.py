@@ -1,4 +1,5 @@
 from collatex import *
+from collatex.display_module import *
 
 collation = Collation()
 collation.add_plain_witness("A", "the cat is black")

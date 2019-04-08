@@ -19,7 +19,10 @@ USER $NB_USER
 RUN conda install -c omnia pygraphviz
 
 # Install nbextensions, collatex + dependencies
-RUN pip install --no-cache-dir collatex jupyter_contrib_nbextensions
+RUN pip install --no-cache-dir \
+		collatex \
+		jupyter_contrib_nbextensions \
+		python-Levenshtein
 
 # setup julia + hypercollate + nbextensions
 # https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/runtools/readme.html
