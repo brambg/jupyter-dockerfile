@@ -16,6 +16,8 @@ RUN	cd /opt && \
 
 USER $NB_USER
 
+RUN conda install -c omnia pygraphviz
+
 # Install nbextensions, collatex + dependencies
 RUN pip install --no-cache-dir collatex jupyter_contrib_nbextensions
 
