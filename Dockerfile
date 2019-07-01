@@ -26,7 +26,7 @@ RUN pip install --no-cache-dir \
 
 # setup julia + hypercollate + nbextensions
 # https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/runtools/readme.html
-RUN	julia -e 'using Pkg;Pkg.add("IJulia");Pkg.develop(PackageSpec(url = "https://github.com/brambg/HyperCollate.jl")); using HyperCollate' && \
+RUN	julia -e 'using Pkg;Pkg.add("IJulia");Pkg.develop(PackageSpec(url = "https://github.com/brambg/HyperCollate.jl")); using HyperCollate,IJulia' && \
 	jupyter contrib nbextension install --user #&& \
 	jupyter nbextension enable code_prettify codefolding highlighter
 
